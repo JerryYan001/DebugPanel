@@ -20,7 +20,7 @@ fileprivate func Stack() -> UIStackView {
 /// 调试面板
 public class DebugPanel: UIWindow {
     
-    /// Window必须被持有才会显示，由于调试窗口只需要一个就够，所以设计成单例。
+    /// 单例
     public static let shared = DebugPanel()
     
     /// 需要手动指定宽度
