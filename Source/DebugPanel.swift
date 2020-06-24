@@ -183,8 +183,8 @@ public extension DebugPanel {
             }
         }
         if frame.origin == .zero {
-            frame.origin.y = (screen.bounds.size.height - frame.size.height) * 0.5
-            frame.origin.x = (screen.bounds.size.width - frame.size.width) * 0.5
+            frame.origin.y = screen.bounds.size.height - frame.size.height - gap
+            frame.origin.x = screen.bounds.size.width - frame.size.width - gap
         }
     }
     
