@@ -83,7 +83,10 @@ public class DebugPanel: UIWindow {
         layer.shadowOffset = .init(width: 0, height: 5)
         layer.shadowOpacity = 0.2
         
-        windowScene = UIApplication.shared.windows.last?.windowScene
+        if #available(iOS 13, *) {
+            windowScene = UIApplication.shared.windows.last?.windowScene
+        }
+        
         isHidden = false
         
         vc.view.addSubview(mainStack)
