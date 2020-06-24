@@ -18,21 +18,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        DebugPanel.loadPanel { (panel) in
+        DebugPanel.load { (panel) in
             panel.titleLabel.text = "调试窗口"
             panel.width = 150
             
             panel.add("按钮1") { (sender) in
                 print("点击了按钮1")
-                DebugPanel.updatePanel(button: 0, title: "按钮1+")
+                DebugPanel.update(button: 0, title: "按钮1+")
             }
             panel.add("按钮2") { (sender) in
                 print("点击了按钮2")
-                DebugPanel.updatePanel(button: 1, title: "按钮2+")
+                DebugPanel.update(button: 1, title: "按钮2+")
             }
             panel.add("按钮3") { (sender) in
                 print("点击了按钮3")
-                DebugPanel.updatePanel(button: 2, title: "按钮3+")
+                DebugPanel.update(button: 2, title: "按钮3+")
             }
             panel.add("不可用的按钮")
             panel.add("隐藏") { (sender) in

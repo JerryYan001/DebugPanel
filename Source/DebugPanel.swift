@@ -134,7 +134,7 @@ public extension DebugPanel {
     
     /// 加载面板
     /// - Parameter callback: 回调
-    static func loadPanel(_ callback: (DebugPanel) -> Void) {
+    static func load(_ callback: (DebugPanel) -> Void) {
         callback(shared)
         shared.commit()
     }
@@ -143,7 +143,7 @@ public extension DebugPanel {
     /// - Parameters:
     ///   - index: 按钮索引（从0开始）
     ///   - title: 按钮新的标题
-    static func updatePanel(button index: Int, title: String) {
+    static func update(button index: Int, title: String) {
         if index < shared.btns.count {
             let btn = shared.btns[index]
             btn.setTitle(title, for: .normal)
